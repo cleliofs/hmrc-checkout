@@ -8,4 +8,6 @@ import java.util.List;
 public interface CheckoutService {
 
     String performCheckout(List<Item> items);
+
+    String performCheckoutWithOffers(List<Item> items);
 }

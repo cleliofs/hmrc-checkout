@@ -62,4 +62,26 @@ public class CheckoutServiceTest {
         final String totalPrice = underTest.performCheckout(items);
         assertEquals("£3.75", totalPrice);
     }
+
+    @Test
+    public void testPerformCheckoutWithOffers1() {
+        final List<Item> items = new ImmutableList.Builder<Item>().add(APPLE, APPLE, ORANGE, APPLE).build();
+        final String totalPrice = underTest.performCheckoutWithOffers(items);
+        assertEquals("£1.45", totalPrice);
+    }
+
+    @Test
+    public void testPerformCheckoutWithOffers2() {
+        final List<Item> items = new ImmutableList.Builder<Item>().add(APPLE, ORANGE, APPLE, APPLE, ORANGE, APPLE, APPLE, ORANGE).build();
+        final String totalPrice = underTest.performCheckoutWithOffers(items);
+        assertEquals("£2.30", totalPrice);
+    }
+
+    @Test
+    public void testPerformCheckoutWithOffers3() {
+        final List<Item> items = new ImmutableList.Builder<Item>().add(APPLE, ORANGE, APPLE, APPLE, ORANGE, APPLE, APPLE, ORANGE, ORANGE).build();
+        final String totalPrice = underTest.performCheckoutWithOffers(items);
+        assertEquals("£2.55", totalPrice);
+    }
+
 }
