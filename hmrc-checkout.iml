@@ -7,8 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="junit:junit:4.12" level="project" />
-    <orderEntry type="library" name="org.mockito:mockito-core:1.9.0" level="project" />
-    <orderEntry type="library" name="com.google.guava:guava:14.0" level="project" />
+    <orderEntry type="library" name="com.google.guava:guava:14.0.1" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/junit-4.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
